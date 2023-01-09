@@ -8,7 +8,7 @@ function Sidebar() {
       <ul>
       {SidebarLinks.map((val, key)=>{
         return (
-          <li className = "item" key ={key} onClick = {()=>{window.location.pathname = val.link}}>
+          <li className = "item" key ={key} onClick = {(e)=>{e.preventDefault(); window.location.pathname = val.link}}>
             {" "}
             <div className = "Icon">{val.icon}</div>
             {" "}

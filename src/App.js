@@ -7,7 +7,7 @@ import TroubleShooting from './Pages/TroubleShooting';
 
 function App() {
 
-  let Navigation
+  let Navigation = Home;
   switch (window.location.pathname) {
     case "/Home":
       Navigation = Home
@@ -26,7 +26,7 @@ function App() {
   return (
     <div className="App">
       <Sidebar />
-      <Navigation/>
+      <Navigation />
     </div>
   );
 }

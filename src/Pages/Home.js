@@ -1,14 +1,22 @@
 import React from 'react'
 import '../App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Home() {
-
-    
-    const [fName, setfName] = useState();
+    const [fName, setfName] = useState(" ");
     const [lName, setlName] = useState();
     const [nhi, setnhi] = useState();
-    const [showForm, setShowForm] = useState();
+    const [showForm, setShowForm] = useState(true);
+
+
+    useEffect (()=>{
+        const data = window.localStorage.getItem('formIntro');
+        console.log(data);
+        if (data!==null){setShowForm(JSON.parse(data))}
+    }, [])
+    useEffect(()=>{
+        window.localStorage.setItem('formIntro', JSON.stringify(showForm))
+    }, [showForm])
 
     const handleForm = (e) =>{
         e.preventDefault();

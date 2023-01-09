@@ -10,9 +10,9 @@ function Sidebar() {
         return (
           <li className = "item" key ={key}>
             {" "}
-            <div>{val.icon}</div>
+            <div className = "Icon">{val.icon}</div>
             {" "}
-            <div>{val.title}</div>
+            <div className = "Title">{val.title}</div>
           </li>
         )
       })}

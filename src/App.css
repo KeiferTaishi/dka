@@ -1,8 +1,17 @@
 .App{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
+    display:flex;
+    background-color: #cfd9e9;
 }
+.Home{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height:100%;
 
+}
 .sideNav{
     height:100%;
     width: 300px;
@@ -13,7 +22,6 @@ ul{
     height:auto;
     width: 100%;
     padding: 0;
-    
 }
 
 .item{
@@ -49,4 +57,25 @@ ul{
 .item:hover{
     background-color: #587cb2;
     transition: 1s;
+}
+
+
+.Container h1{
+    color:red;
+  
+    text-align: center;
+}
+
+.Container{
+    width:70%;
+    text-align: center;
+}
+
+.Container form{
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }

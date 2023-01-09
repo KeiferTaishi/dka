@@ -10,7 +10,7 @@ export const SidebarLinks = [
 
         title: "Home",
         icon: <HomeIcon/>,
-        link: "/home"
+        link: "/Home"
     },
 
     {
@@ -26,7 +26,7 @@ export const SidebarLinks = [
     {
         title: "Troubleshooting",
         icon: <TroubleshootIcon/>,
-        link: "/Troubleshooting"
+        link: "/TroubleShooting"
     },
 
 ];

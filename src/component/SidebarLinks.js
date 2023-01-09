@@ -1,29 +1,33 @@
 import React from 'react'
+import HomeIcon from '@mui/icons-material/Home';
+import HealingIcon from '@mui/icons-material/Healing';
+import MedicalInformationIcon from '@mui/icons-material/MedicalInformation';
+import TroubleshootIcon from '@mui/icons-material/Troubleshoot';
 
 export const SidebarLinks = [
 
     {
 
         title: "Home",
-        icon: <Icon />,
+        icon: <HomeIcon/>,
         link: "/home"
     },
 
     {
         title: "Progress",
-        icon: <Icon />,
+        icon: <HealingIcon/>,
         link: "/Progress"
     },
     {
         title: "Data",
-        icon: <Icon/>,
+        icon: <MedicalInformationIcon/>,
         link: "/Data"
     },
     {
         title: "Troubleshooting",
-        icon: <Icon />,
+        icon: <TroubleshootIcon/>,
         link: "/Troubleshooting"
     },
 
-]
+];
 

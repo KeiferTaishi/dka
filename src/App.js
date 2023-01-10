@@ -5,8 +5,8 @@ import Home from './Pages/Home';
 import Progress from './Pages/Progress';
 import TroubleShooting from './Pages/TroubleShooting';
 
-function App() {
 
+function App() {
   let Navigation = Home;
   switch (window.location.pathname) {
     case "/Home":

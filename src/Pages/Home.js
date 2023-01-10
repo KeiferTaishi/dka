@@ -1,6 +1,10 @@
 import React from 'react'
 import '../App.css';
 import { useState, useEffect } from 'react';
+import firebase from './firebase';
+import { hydrate } from 'react-dom';
+
+
 
 export default function Home() {
     const [fName, setfName] = useState(" ");
@@ -8,6 +12,13 @@ export default function Home() {
     const [nhi, setnhi] = useState();
     const [showForm, setShowForm] = useState(true);
 
+    const [bsl, setBsl] = useState();
+    const [ketones, setKetones] = useState();
+
+    const handlereset = ()=>{
+        localStorage.clear();
+        window.location.pathname = "/Home";
+    }
 
     useEffect (()=>{
         const data = window.localStorage.getItem('formIntro');
@@ -23,8 +34,21 @@ export default function Home() {
         setShowForm(false);
     }
 
+    
+
     if (!showForm){
-        return <p>{fName}</p>
+        return (
+            <div className = "results">
+            <form>
+                <label> Enter BSL</label>
+                <input type = "number" required value = {bsl} onChange= {(e)=> setBsl(e.target.value)}/>
+                <label> Enter Ketones</label>
+                <input type = "number" required value = {ketones} onChange= {(e)=> setKetones(e.target.value)}/>
+                <button type = "submit"> Submit </button>
+            </form>
+            <button onClick={handlereset}>Reset</button>
+            </div>
+        )
     }
   return (
     <div className="Home">

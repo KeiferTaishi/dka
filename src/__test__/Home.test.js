@@ -1,6 +1,7 @@
 import {fireEvent, render, screen} from "@testing-library/react";
 import Home from "../Pages/Home";
-import App from "../App";
+
+
 describe('Home component', () => {
   test('Check that firstname input is saved using usestate and onChange', () => {
     const { getByLabelText } = render(<Home />);

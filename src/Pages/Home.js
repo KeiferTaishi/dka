@@ -65,7 +65,7 @@ export default function Home() {
                 
             }
 
-            if (previousKetone == "undefined"){
+            if (previousKetone === "undefined"){
                 
                 Cookies.set('ketone', ketones);
             }

@@ -296,5 +296,6 @@ font-family: 'Ubuntu', sans-serif;
     border-radius: 20px;
     margin: 0 10px;
     cursor: pointer;
+    border: 1px solid black;
 }
 

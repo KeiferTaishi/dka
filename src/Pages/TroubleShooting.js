@@ -29,26 +29,26 @@ const cards = {
   },
   keifer5: {
 
-    h3: "Q5",
-    p: "answer5"
+    h3: "Can I take a venous blood gas from the patient's IV line?",
+    p: "Yes, however you will need to flush the line prior and discard at least 5mls. It's preferred to either take bloods straight from the vein or inster a free IVC in which you can take blood from."
 
   },
   keifer6: {
 
-    h3: "Q6",
-    p: "answer6"
+    h3: "Are all DKA IVF pre-drawn?",
+    p: "Yes, never manually insert potassium into the 0.9% Nacl bags. Wrong doses can lead to emergency situations."
 
   },
   keifer7: {
 
-    h3: "Q7",
-    p: "answer7"
+    h3: "My patients IVC has tissued what do i do?",
+    p: "Stop any infusions through the tissued IVC. Take out the IVC and mointor for phlebitis, offer pain relief if needed. Insert another IVC as far as possible from the tissued IVC site."
 
   },
   keifer8: {
 
-    h3: "Q8",
-    p: "answer8"
+    h3: "My patient's ketones are above 0.6 after coming off the protocol. What do i do?",
+    p: "You will need to contact the registrar. In most circumstances, the patient will need a bolus dose of insulin and potentially restart on IV insulin."
 
   },
   keifer9: {
@@ -107,10 +107,9 @@ for(let i =0; i <totalp; i++){
 }
 
 let nav =page.map(item =>{
-  return <div className="Btn" onClick={()=>{switchPage(item)}}></div>
+  return <div className="Btn" data-testid="Btn" style={pageNumber === item ? {backgroundColor:'lightpink'} : null} onClick={()=>{switchPage(item)}}></div>
 })
 
-console.log(page);
 return (
   <div>
     <div className="main">

@@ -25,6 +25,9 @@ function App() {
   }
   return (
     <div className="App">
+      <div classname="logo">
+      <h1>DKA Guide</h1>
+      </div>
       <Sidebar />
       <Navigation />
     </div>

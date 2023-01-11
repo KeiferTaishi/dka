@@ -53,26 +53,26 @@ const cards = {
   },
   keifer9: {
 
-    h3: "Q9",
-    p: "answer9"
+    h3: "Do i need to get a verbal order each time i titrate infusions?",
+    p: "No. The DKA protocol provides standing orders for each of the infusions"
 
   },
   keifer10: {
 
-    h3: "Q10",
-    p: "answer10"
+    h3: "Is the patient allowed to titrate their IV insulin infusion if they are normally on a IV insulin infusion?",
+    p: "No. IV infusions are only to be titrated by HDB trained staff even if the patient is aware of the following steps."
 
   },
   keifer11: {
 
-    h3: "Q11",
-    p: "answer11"
+    h3: "My patients results are not improving, what do i do?",
+    p: "If you are concerned at all, seek help. If patient's are not responding to treatment after 2-3 hours and venous pH is below 7.2 refer patient to ICU."
 
   },
   keifer12: {
 
-    h3: "Q12",
-    p: "answer12"
+    h3: "Do i need to check vital signs every hour along with ketones, bsl and blood gases?",
+    p: "Yes. Patient's on the DKA pathway are situated in ICU or HDB in which hourly monitoring is required unless exempt by a medical registrar or consultant."
 
   },
 }

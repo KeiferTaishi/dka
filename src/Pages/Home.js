@@ -49,7 +49,7 @@ export default function Home() {
             potassium
         }
         try{
-        //await PatientDataService.addResults(result);
+        await PatientDataService.addResults(result);
         }
         catch{
             console.log("Error")
@@ -92,12 +92,12 @@ export default function Home() {
             if (potassium > 5.5){
                 setPotassiumInstruction("No potassium to be added to fluids.");
             }
-            else if (potassium > 3.5){
+            else if (potassium > 3.6){
                 if (potassium < 5.5){
                 setPotassiumInstruction("If patient is still having Nacl 0.9% infusion swap IVF fluid out for Nacl 0.9% with 20mmol KCL. If no longer having 0.9% Nacl, use pre-prepared 10% Dextrose with 10mmol KCL in 500mls INSTEAD of the current Dextrose 10% infusion.");
             }
         }
-            else if (potassium < 3.5){
+            else if (potassium < 3.6){
                 setPotassiumInstruction("Give 1000ml pre-prepared 0.9% Nacl with 20mmol KCL in addition to current IVF. DO NOT ADMINISTER MORE THAN 40mmol KCL through a single IVC.")
             }
         
@@ -112,7 +112,7 @@ export default function Home() {
             weight
         }
 
-           // await PatientDataService.addPatients(newPatient);
+            await PatientDataService.addPatients(newPatient);
             Cookies.set('weight', weight);
             console.log(previousKetone);
             setShowForm(false);
@@ -172,13 +172,13 @@ export default function Home() {
         <h1>DKA Guide</h1>
         <form onSubmit={handleSubmit}>
             <label htmlFor ="first"> Patient's firstname</label>
-            <input type = "text" id = "first" data-testid="first" required value = {fName} onChange = {(e) => setfName(e.target.value)}/>
+            <input type = "text" id = "first" data-testid="first" required value = {fName} onChange = {(e) => setfName(e.target.value.replace(/[^a-z]/gi, ""))}/>
             <label htmlFor = "second"> Patient's lastname</label>
-            <input type = "text" id="second" required value = {lName} onChange = {(e) => setlName(e.target.value)}/>
+            <input type = "text" id="second" required value = {lName} onChange = {(e) => setlName(e.target.value.replace(/[^a-z]/gi, ""))}/>
             <label htmlFor = "n"> Patient's NHI</label>
             <input type = "text" id="n"required value = {nhi} onChange = {(e) => setnhi(e.target.value)}/>
             <label htmlFor = "wei"> Patient's Weight</label>
-            <input type = "text" id="wei"required value = {weight} onChange = {(e) => setWeight(e.target.value)}/>
+            <input type = "number" id="wei"required value = {weight} onChange = {(e) => setWeight(e.target.value)}/>
             <button type = "submit" className="Submitone"> Submit </button>
         </form>
         <p></p>

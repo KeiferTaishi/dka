@@ -2,7 +2,7 @@
     width: 100%;
     height: 100vh;
     display:flex;
-    background-color: #cfd9e9;
+    background-image: linear-gradient( rgb(196, 196, 245), rgb(236, 236, 236));
 }
 .Home{
     display: flex;
@@ -77,5 +77,147 @@ ul{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+}
+
+.content{
+    display:flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.results{
+
+    display:flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:auto;
+}
+
+.h1{
+    margin:2rem;
+    text-align: center;
+}
+.content form{
+
+    display:flex;
+    flex-direction: column;
+    padding:1rem;
+}
+
+.setup{
+    background-image: linear-gradient( rgb(196, 196, 245), rgb(236, 236, 236));
+    width:100%;
+
+}
+.cont{
+    display:flex;
+}
+.content form input{
+    text-align: center;
+    padding:0.9rem;
+}
+
+.submittwo{
+    margin: 1.5rem;
+    padding:0.5rem;
+    border-radius: 20px;
+    background-color: #f99393;
+    color:black;
+    font-size: 1rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+
+.submittwo:hover{
+    background-color:#e77070;
+
+    transition: 1s;
+}
+
+.Submitone{
+    margin: 1.5rem;
+    padding:0.5rem;
+    border-radius: 20px;
+    background-color: #f99393;
+    color:black;
+    font-size: 1rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+.reset{
+    margin: 1.5rem;
+    padding:0.5rem;
+    border-radius: 20px;
+    background-color: #f99393;
+    color:black;
+    font-size: 1rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+.Submitone:hover{
+    background-color:#e77070;
+
+    transition: 1s;
+}
+
+.Container form label{
+    text-align: center;
+    padding:0.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.content form label{
+    text-align: center;
+    padding:0.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.Q1{
+    background-color: #e77070;
+    display: flex;
+    align-items: center;
+    width:50%;
+}
+.Q2{
+    background-color: #e77070;
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.sub{
+    display:none;
+    width:50%;
+}
+
+.subactive{
+    display: flex;
+    background-color: #e77070;
+    width:50%;
+}
+.subtwo{
+    display:none;
+}
+
+.arrow{
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.Instructions{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding:3rem;
 }

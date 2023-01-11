@@ -1,9 +1,13 @@
 import React from 'react'
 
 export default function Progress() {
-  console.log("get");
   return (
-    <div>Progress
+    <div>
+      <h1>Patient Progress</h1>
+      <div class= "patient">
+
+      </div>
+      
     </div>
   )
 }

@@ -164,10 +164,10 @@ export default function Home() {
             </div>
         )
     }
+    //https://bobbyhadz.com/blog/react-input-only-letters used to find out how to only allow text in the text fields
   return (
     <div className="Home">
         
-
         <div className = "Container">
         <h1>DKA Guide</h1>
         <form onSubmit={handleSubmit}>

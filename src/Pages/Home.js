@@ -48,14 +48,12 @@ export default function Home() {
             ketones,
             potassium
         }
-        try{
-        await PatientDataService.addResults(result);
-        }
-        catch{
-            console.log("Error")
-        }
+        console.log(bsl);
             if ( bsl < 4.0){
                 setInstruct("Blood sugars less than 4. STOP INSULIN INFUSION. If patient responsive give x2 hypokits. If unresponsive call 777 and administer bolus dextrose infusion.")
+            }
+            else if (bsl > 9.9 && bsl <13.9){
+                setInstruct("Stable blood sugars. No need to titrate Dextrose infusion");
             }
             else if (bsl > 14.0){
                 setInstruct("Blood sugars over 14. Decrease Dextrose infusion by 25ml/hr.");
@@ -64,8 +62,8 @@ export default function Home() {
                 setInstruct("Blood sugars below 10. Increase Dextrose infusion by 25ml/hr");
                 
             }
-
-            if (previousKetone === "undefined"){
+            
+            if (previousKetone === undefined){
                 
                 Cookies.set('ketone', ketones);
             }
@@ -100,6 +98,13 @@ export default function Home() {
             else if (potassium < 3.6){
                 setPotassiumInstruction("Give 1000ml pre-prepared 0.9% Nacl with 20mmol KCL in addition to current IVF. DO NOT ADMINISTER MORE THAN 40mmol KCL through a single IVC.")
             }
+
+            try{
+                await PatientDataService.addResults(result);
+                }
+                catch{
+                    console.log("Error")
+                }
         
     }
     //saving patients data to database
